@@ -11,8 +11,8 @@ app.get('/', function(request, response){
 	response.sendFile(__dirname + '/public/index.html');
 }); 
 
-app.get('/api/v1/create/issue/:a/:b/:c', function(request, response){
-	//GET restful endpoints
+app.get('/api/v1/read/products', function(request, response){
+	response.send("Hello World");
 	response.end();
 });
 
