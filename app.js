@@ -12,10 +12,20 @@ app.get('/', function(request, response){
 }); 
 
 app.get('/api/v1/read/products', function(request, response){
-	var products = [{
-		title : 'a sickass hat',
-		description : 'a sickhas hat all the babes will be like thats a sickass hat.'
-	}]
+	var products = [
+		{
+			title : 'Product 1',
+			category : 'Product Category 2',
+			description : 'Product 1 description',
+			imageLink : 'http://placehold.it/350x150'
+		},
+		{
+			title : '2 title',
+			category : 'category-2',
+			description : 'desc-2',
+			imageLink : 'http://placehold.it/350x150'
+		}
+	]
 	response.send(products);
 	response.end();
 });
