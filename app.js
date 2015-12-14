@@ -12,7 +12,11 @@ app.get('/', function(request, response){
 }); 
 
 app.get('/api/v1/read/products', function(request, response){
-	response.send("Hello World");
+	var products = [{
+		title : 'a sickass hat',
+		description : 'a sickhas hat all the babes will be like thats a sickass hat.'
+	}]
+	response.send(products);
 	response.end();
 });
 
