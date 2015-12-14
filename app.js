@@ -17,13 +17,15 @@ app.get('/api/v1/read/products', function(request, response){
 			title : 'Product 1',
 			category : 'Product Category 2',
 			description : 'Product 1 description',
-			imageLink : 'http://placehold.it/350x150'
+			imageLink : 'http://placehold.it/250x250',
+			price : 8.50
 		},
 		{
-			title : '2 title',
-			category : 'category-2',
-			description : 'desc-2',
-			imageLink : 'http://placehold.it/350x150'
+			title : 'Product 2',
+			category : 'Product Category 2',
+			description : 'Product 2 description',
+			imageLink : 'http://placehold.it/250x250',
+			price : 2.34
 		}
 	]
 	response.send(products);

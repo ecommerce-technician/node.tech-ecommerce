@@ -1,12 +1,33 @@
-<md-toolbar class="md-whiteframe-z3 toolbar-text" layout-padding>
+<md-toolbar class="md-whiteframe-z3 toolbar-text" ng-show="!showSearch" layout-padding>
     <div class="md-toolbar-tools">
       <span class="md-display-2">{{page.title}}</span>
         <span flex></span>
+        	<md-button aria-label="Search" ng-click="showSearch = !showSearch" class="search-bar">
+        <i class="material-icons">search</i>
+      </md-button>
+    </div>
+</md-toolbar>
+<md-toolbar class="md-whiteframe-z3 toolbar-text" ng-show="showSearch" layout-padding>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="showSearch = !showSearch" aria-label="Back" layout-align="left left">
+        <i class="material-icons">arrow_back</i>
+      </md-button>
+      <md-input-container>
+        <label>enter search</label>
+        <input ng-model="searchTerms">
+      </md-input-container>
+        <md-button ng-click="search()">
+            <i class="material-icons" layout-fill>search</i>
+        </md-button>
     </div>
 </md-toolbar>
 <md-content flex layout-padding>
-	<i class="material-icons">search</i>
-	<div layout="row" layout-wrap flex ng-repeat="product in products">
-    	{{product.title}}
+<div flex layout="column" layout-wrap>
+	<div flex>
+		<iframe ng-src="{{trendsURL}}" height="500px" width="100%"></iframe>
 	</div>
+	<div flex ng-repeat="item in items">
+		<h2>{{item}}</h2>
+	</div>
+</div>
 </md-content>
