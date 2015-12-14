@@ -1,24 +1,12 @@
-<md-toolbar class="md-whiteframe-z3 toolbar-text" ng-show="!showSearch" layout-padding>
+<md-toolbar class="md-whiteframe-z3" layout-padding>
     <div class="md-toolbar-tools">
-      <span class="md-display-2">{{page.title}}</span>
-        <span flex></span>
-        	<md-button aria-label="Search" ng-click="showSearch = !showSearch" class="search-bar">
-        <i class="material-icons">search</i>
-      </md-button>
-    </div>
-</md-toolbar>
-<md-toolbar class="md-whiteframe-z3 toolbar-text" ng-show="showSearch" layout-padding>
-    <div class="md-toolbar-tools">
-      <md-button ng-click="showSearch = !showSearch" aria-label="Back" layout-align="left left">
-        <i class="material-icons">arrow_back</i>
-      </md-button>
+        <md-button ng-click="search()">
+            <span class="md-display-2"><i class="material-icons" layout-fill>search</i></span>
+        </md-button>
       <md-input-container>
         <label>enter search</label>
         <input ng-model="searchTerms">
       </md-input-container>
-        <md-button ng-click="search()">
-            <i class="material-icons" layout-fill>search</i>
-        </md-button>
     </div>
 </md-toolbar>
 <md-content flex layout-padding>
