@@ -1,2 +1,12 @@
-Node.tech ecommerce launcher
-{{alive}}
+<md-toolbar class="md-whiteframe-z3 toolbar-text" layout-padding>
+    <div class="md-toolbar-tools">
+      <span class="md-display-2">{{page.title}}</span>
+        <span flex></span>
+    </div>
+</md-toolbar>
+<md-content flex layout-padding>
+	<i class="material-icons">search</i>
+	<div layout="row" layout-wrap flex ng-repeat="product in products">
+    	{{product.title}}
+	</div>
+</md-content>
