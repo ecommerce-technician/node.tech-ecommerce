@@ -1,5 +1,12 @@
 # node.tech
 ## Creates a simple node app with angular
+
+### Simple install
+```
+sh launch.sh
+```
+
+### Manual install
 ```
 xcode-select –install
 ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
