@@ -10,13 +10,13 @@ then
 	case "$1" in
     install)
       echo "installing xcode"
-      xcode-select –install
+      xcode-select –-install
       echo "installing brew"
       ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
       brew doctor
       brew install caskroom/cask/brew-cask
       echo "installing git"
-      brew intstall git
+      brew install git
       echo "installing node"
       brew install node
       echo "installing packages and dependencies"
